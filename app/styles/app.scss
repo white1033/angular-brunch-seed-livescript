@@ -1,12 +1,12 @@
-//
-// Bootstrap v2.2.1
-//
-// Copyright 2012 Twitter, Inc
-// Licensed under the Apache License v2.0
-// http://www.apache.org/licenses/LICENSE-2.0
-//
-// Designed and built with all the love in the world @twitter by @mdo and @fat.
-// Converted to Sass by @thomasmcdonald_, and distributed as bootstrap-sass
+/*!
+ * Bootstrap v2.3.0
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
 
 // Core variables and mixins
 @import "vendor/styles/bootstrap/variables"; // Modify this for custom colors, font-sizes, etc
@@ -36,7 +36,7 @@
 // Components: Buttons & Alerts
 @import "vendor/styles/bootstrap/buttons";
 @import "vendor/styles/bootstrap/button-groups";
-@import "vendor/styles/bootstrap/alerts"; // Note: alerts share common CSS with buttons and thus have styles in _buttons.scss
+@import "vendor/styles/bootstrap/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons
 
 // Components: Nav
 @import "vendor/styles/bootstrap/navs";
@@ -61,3 +61,6 @@
 
 // Utility classes
 @import "vendor/styles/bootstrap/utilities"; // Has to be last to override when necessary
+
+// Enable Responsive
+//@import "_responsive";
