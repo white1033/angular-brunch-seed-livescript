@@ -17,7 +17,7 @@ scripts:
 dependencies: {}
 devDependencies:
   testacular: '>= 0.0.16'
-  LiveScript: '1.1.x'
+  LiveScript: '>= 1.1.1'
   brunch: '1.5.x'
   'javascript-brunch': '1.5.x'
   'LiveScript-brunch': '1.5.x'
