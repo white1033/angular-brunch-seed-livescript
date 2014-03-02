@@ -1,6 +1,6 @@
 {
   "name": "angular-brunch-seed-livescript",
-  "repo": "scotch/angular-brunch-seed-livescript",
+  "repo": "white1033/angular-brunch-seed-livescript",
   "version": "0.0.1",
   "main": "_public/js/app.js",
   "ignore": [

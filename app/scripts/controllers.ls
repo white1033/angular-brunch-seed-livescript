@@ -27,6 +27,8 @@ mod.AppCtrl = <[$scope $location $resource $rootScope]> ++ (s, $location, $resou
 mod.MyCtrl1 = <[$scope]> ++ (s) ->
   s.Title = "MyCtrl1"
 
+  s.onePlusOne = 2
+
 mod.MyCtrl2 = <[$scope]> ++ (s) ->
   s.Title = "MyCtrl2"
 
@@ -51,7 +53,7 @@ mod.TodoCtrl = <[$scope]> ++ (s) ->
 
     count
 
-  s.acrhive = ->
+  s.archive = ->
     old-todos = s.todos
     s.todos = []
     angular.for-each old-todos, (todo) ->
