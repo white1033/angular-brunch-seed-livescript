@@ -6,6 +6,7 @@ build.xml
 .project
 .settings
 .idea/*
+
 app/assets/*html
 app/assets/partials/app/*.html
 
@@ -14,3 +15,5 @@ node_modules/*
 npm-debug.log
 
 *.swp
+
+bower_components/
