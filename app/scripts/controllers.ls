@@ -1,3 +1,5 @@
+'use strict'
+
 mod = {}
 
 mod.AppCtrl = <[$scope $location $resource $rootScope]> ++ (s, $location, $resource, $rootScope) ->
@@ -27,5 +29,32 @@ mod.MyCtrl1 = <[$scope]> ++ (s) ->
 
 mod.MyCtrl2 = <[$scope]> ++ (s) ->
   s.Title = "MyCtrl2"
+
+mod.TodoCtrl = <[$scope]> ++ (s) ->
+  s.todos =
+    * text: 'learn angular'
+      done: true
+    * text: 'build an angular app'
+      done: false
+
+  s.add-todo = ->
+    s.todos.push do
+      text: s.todo-text
+      done: false
+
+    s.todo-text = ''
+
+  s.remaining = ->
+    count = 0
+    angular.for-each s.todos, (todo) ->
+      count += (if todo.done then 0 else 1)
+
+    count
+
+  s.acrhive = ->
+    old-todos = s.todos
+    s.todos = []
+    angular.for-each old-todos, (todo) ->
+      s.todos.push todo unless todo.done
 
 angular.module 'app.controllers' [] .controller mod

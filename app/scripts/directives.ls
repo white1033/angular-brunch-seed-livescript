@@ -1,3 +1,5 @@
+'use strict'
+
 # Directive
 
 # Create an object to hold the module.

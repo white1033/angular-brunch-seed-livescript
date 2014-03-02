@@ -1,3 +1,5 @@
+'use strict'
+
 # Services
 
 # Create an object to hold the module.

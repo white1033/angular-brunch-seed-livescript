@@ -1,35 +1,37 @@
 exports.config =
   # See docs at http://brunch.readthedocs.org/en/latest/config.html.
+  conventions:
+    assets:  /^app\/assets\//
+    ignored: /^(bower_components\/bootstrap-less(-themes)?|app\/styles\/overrides|(.*?\/)?[_]\w*)/
   modules:
     definition: false
-    wrapper: (path, data) ->
-      """
-(function() {
-  'use strict';
-  #{data}
-}).call(this);\n\n
-      """
+    wrapper: false
   paths:
     public: '_public'
   files:
     javascripts:
       joinTo:
         'js/app.js': /^app/
-        'js/vendor.js': /^vendor/
-      order:
-        before:
-          'vendor/scripts/console-helper.js'
-          'vendor/scripts/jquery-1.8.2.js'
-          'vendor/scripts/angular/angular.js'
-          'vendor/scripts/angular/angular-resource.js'
-          'vendor/scripts/angular/angular-cookies.js'
+        'js/vendor.js': /^(bower_components|vendor)/
 
     stylesheets:
       joinTo:
-        'css/app.css': /^(app|vendor)/
+        'css/app.css': /^(app|vendor|bower_components)/
+      order:
+        before: [
+          'app/styles/app.less'
+        ]
 
     templates:
-      joinTo: 'js/templates.js'
+      joinTo:
+        'js/dontUseMe' : /^app/ # dirty hack for Jade compiling.
+
+  plugins:
+    jade:
+      pretty: yes # Adds pretty-indentation whitespaces to output (false by default)
+    jade_angular:
+      modules_folder: 'partials'
+      locals: {}
 
   # Enable or disable minifying of result js / css files.
   # minify: true
