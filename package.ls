@@ -18,7 +18,7 @@ dependencies: {}
 devDependencies:
   jade: '~0.33'
   brunch: '~1.7'
-  LiveScript: '>= 1.1.1'
+  LiveScript: '~1.2.0'
 
   'javascript-brunch': '>= 1.0 < 1.8'
   'LiveScript-brunch': '>= 1.0 < 1.8'
@@ -36,5 +36,6 @@ devDependencies:
 
   'jade-angularjs-brunch': '~0.0.5'
 
-  'karma': '~0.9.4'
-  'karma-ng-scenario': '~0.0.2'
+  'karma': '~0.10.0'
+  'karma-live-preprocessor': '~0.2.0'
+  'karma-ng-scenario': '~0.1'
