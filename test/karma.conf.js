@@ -8,21 +8,20 @@ module.exports = function(karma) {
 
 
     // frameworks to use
-    frameworks: ['jasmine'],
+    frameworks: ['mocha', 'chai'],
 
 
     // list of files / patterns to load in the browser
     files: [
-
       // Program files
       '_public/js/vendor.js',
       '_public/js/app.js',
 
-      // Specs
 
       // Load mocks directly from bower
       'bower_components/angular-mocks/angular-mocks.js',
 
+      // Specs
       'test/unit/**/*.spec.ls'
     ],
 
@@ -66,19 +65,19 @@ module.exports = function(karma) {
     // - Safari (only Mac)
     // - PhantomJS
     // - IE (only Windows)
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,
 
 
-    // Plugins to load
-    plugins: [
-      'karma-jasmine',
-      'karma-live-preprocessor',
-      'karma-chrome-launcher'
-    ],
+    // // Plugins to load
+    // plugins: [
+      // 'karma-phantomjs-launcher',
+      // 'karma-live-preprocessor'
+      // 'karma-chrome-launcher'
+    // ],
 
 
     // Continuous Integration mode
