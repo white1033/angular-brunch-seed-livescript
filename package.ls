@@ -12,8 +12,9 @@ engines:
   npm: '1.3.x'
 scripts:
   prepublish: './node_modules/.bin/lsc -cj package.ls'
+  build: 'brunch b'
   start: './node_modules/.bin/brunch watch --server'
-  test: 'node_modules/.bin/karma start test/karma.conf.js'
+  test: 'npm run build && bower i && ./node_modules/karma/bin/karma start --browsers PhantomJS --single-run true test/karma.conf.js'
 dependencies: {}
 devDependencies:
   jade: '~0.33'
@@ -32,10 +33,16 @@ devDependencies:
   'uglify-js-brunch': '>= 1.0 < 1.8'
   'clean-css-brunch': '>= 1.0 < 1.8'
 
-  'bower': '~1.0'
+  'bower': '1.2.x'
 
   'jade-angularjs-brunch': '~0.0.5'
 
-  'karma': '~0.10.0'
+  'karma': '~0.12.0'
   'karma-live-preprocessor': '~0.2.0'
+  'karma-phantomjs-launcher': "^0.1.2"
+  'karma-mocha': '~0.1.0'
+  'karma-chai': '~0.1.0'
   'karma-ng-scenario': '~0.1'
+
+  'mocha': '~1.14.0'
+  'chai': '~1.8.0'
