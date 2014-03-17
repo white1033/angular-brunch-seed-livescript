@@ -19,7 +19,7 @@ Features:
 
 or if you have **Brunch** installed run:
 
-`brunch new myapp --skeleton https://github.com/clkao/angular-brunch-seed-livescript`
+`brunch new myapp --skeleton https://github.com/white1033/angular-brunch-seed-livescript`
 
 ### Running the app during development
 
