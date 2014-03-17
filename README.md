@@ -13,7 +13,7 @@ Features:
 
 ## How to use angular-brunch-seed-livescript
 
-* `git clone https://github.com/clkao/angular-brunch-seed-livescript.git` to clone the **angular-brunch-seed-livescript** repository
+* `git clone https://github.com/white1033/angular-brunch-seed-livescript.git` to clone the **angular-brunch-seed-livescript** repository
 * `cd angular-brunch-seed-livescript`
 * `./scripts/init.sh` to install node packages
 
